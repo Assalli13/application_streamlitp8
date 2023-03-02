@@ -72,7 +72,7 @@ if(st.button('Get info')):
 AMT_credit = st.sidebar.number_input('AMT_CREDIT', -2.0, 7.0, step=0.0001, format="%.4f") 
 income = st.sidebar.number_input('AMT_ANNUITY',  -2.0, 10.0,step=0.00001, format="%.4f")
 age = st.sidebar.number_input('DAYS_BIRTH', -4.0, 4.0, step=0.0001, format="%.4f")
-ext_source_1 = st.sidebar.number_input('EXT_SOURCE_1', -4.0, 4.0, step=0.0001, format="%.4f")
+ext_source_1 = st.sidebar.number_input('EXT_SOURCE_1', -2.0, 4.0, step=0.0001, format="%.4f")
 ext_source_2 = st.sidebar.number_input('EXT_SOURCE_2', -4.0, 4.0,step=0.0001, format="%.4f")
 ext_source_3 = st.sidebar.number_input('EXT_SOURCE_3', -4.0, 4.0, step=0.0001, format="%.4f")
 
