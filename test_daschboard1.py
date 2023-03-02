@@ -184,7 +184,7 @@ if st.button('Get Score'):
                 st.warning("No data available for this client id or the data is not valid")
         else:
             st.warning("No data available for this client id or the data is not valid")
-    gauge_chart(thres = 0.15)
+    gauge_chart(thres = 0.1)
 
     
     #st.write(data)
