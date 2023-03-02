@@ -118,7 +118,7 @@ if st.button('Get Score'):
     def gauge_chart(thres):
         #client_id, response_data = get_predict_of_id()
         data, response_data = get_predict_of_id()
-        
+        st.write(response_data)
         client_data = pd.DataFrame(data, index=pd.Index([0]))
         #client_data = data.query("SK_ID_CURR == @client_id")
         st.write(client_data)
