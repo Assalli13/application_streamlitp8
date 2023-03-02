@@ -90,7 +90,7 @@ if st.button('Get Score'):
         
         
         #response = requests.post("http://localhost:5000/predictByClientId", json=data)
-        response = requests.post("https://flask-1.assalli13.repl.co/predictByClientId", json=id_client)
+        response = requests.post("https://flask-1.assalli13.repl.co/predictByClientId", json=data)
         if response:
             
             #response = requests.post("https://flask-1.assalli13.repl.co/predictByClientId", json=id_client)
