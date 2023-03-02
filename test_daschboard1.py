@@ -78,7 +78,7 @@ ext_source_3 = st.sidebar.number_input('EXT_SOURCE_3', -4.0, 4.0, step=0.0001, f
 
 if st.button('Get Score'):
     def get_predict_of_id():
-    #Get the client ID from the user
+        #Get the client ID from the user
 
         data = {
             'AMT_ANNUITY': income,
@@ -87,23 +87,24 @@ if st.button('Get Score'):
             'EXT_SOURCE_1': income,
             'EXT_SOURCE_2': ext_source_2,
             'EXT_SOURCE_3': ext_source_3}
-        
-        
-        #response = requests.post("http://localhost:5000/predictByClientId", json=data)
+
         response = requests.post("https://flask-1.assalli13.repl.co/predictByClientId", json=data)
         if response:
             
             #response = requests.post("https://flask-1.assalli13.repl.co/predictByClientId", json=id_client)
             #response = requests.post("http://assali.pythonanywhere.com//predictByClientId", json=id_client)
 
-         # get the response data as a python object
+            # get the response data as a python object
             response_data = json.loads(response.text)
             response_data = response.json()
             #st.write(response_data)
         else:
-             print('NO')
+            print('NO')
 
         return data, response_data
+
+
+
     def show_overview():
             st.title("Risque")
             risque_threshold = st.slider(label = 'Seuil de risque', min_value = 0.0,
