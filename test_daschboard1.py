@@ -45,7 +45,7 @@ data['TARGET'] = list(prediction[:, 1])
 
 if(st.button('General_Info_train')):
 
-    st.write(data_test1)
+    st.write(data_test1.head(4))
     
     def pie_chart(thres):
         percent_sup_seuil = 100 * (data_test['TARGET'] > thres).sum() / data_test.shape[0]
