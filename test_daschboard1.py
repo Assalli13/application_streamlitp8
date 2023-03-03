@@ -83,7 +83,8 @@ if st.button('info_client'):
             #if id_client:
 
         # send the POST request
-        response = requests.post("http://localhost:5000/predictByClientId", json=id_client)
+        #response = requests.post("http://localhost:5000/predictByClientId", json=id_client)
+        response = requests.post("https://flask-1.assalli13.repl.co/predictByClientId", json=id_client)
 
         if response:
             
@@ -260,7 +261,8 @@ if st.button('Nouveau_client'):
             'EXT_SOURCE_3': ext_source_3}
         
         
-        response = requests.post("http://localhost:5000/predict_new", json=data)
+        #response = requests.post("http://localhost:5000/predict_new", json=data)
+        response = requests.post("https://flask-1.assalli13.repl.co/predict_new", json=data)
 
         if response:
             
