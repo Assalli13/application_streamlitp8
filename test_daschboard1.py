@@ -45,7 +45,7 @@ data['TARGET'] = list(prediction[:, 1])
 
 if(st.button('General_Info_train')):
 
-    st.write(data_test1.head(4))
+    st.write(data_test1.head(2))
     
     def pie_chart(thres):
         percent_sup_seuil = 100 * (data_test['TARGET'] > thres).sum() / data_test.shape[0]
@@ -64,7 +64,7 @@ if(st.button('General_Info_train')):
         fig.update_layout(
             title={'text': 'Répartition des clients selon la solvabilité', 'font': dict(size=24),'x': 0.5,'xanchor': 'center'},
             legend=dict(orientation='h',yanchor='bottom', y=1.02,
-            xanchor='right', x=1), margin=dict(l=20, r=20, t=80, b=20), paper_bgcolor='#F2F2F2', font=dict(size=8, color='#4d4d4d'))
+            xanchor='right', x=1), margin=dict(l=20, r=20, t=80, b=20), paper_bgcolor='#F2F2F2', font=dict(size=14, color='#4d4d4d'))
     
         st.plotly_chart(fig)
     pie_chart(thres = 0.15)
